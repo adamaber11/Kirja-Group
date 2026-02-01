@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kirja Group | الموقع الرسمي لشركة</title>
+    <meta name="description"
+        content="Kirja Group تقدم خدمات البرمجة، التصميم الإبداعي، تطوير الواجهات، وحلول مبتكرة. اكتشف أعمالنا وقيمتنا المضافة لمساعدتك في نجاح مشروعك الرقمي.">
+    <meta name="keywords"
+        content="Kirja Group, برمجة مواقع, تصميم جرافيك, تطوير واجهات, حلول رقمية مبتكرة, مشاريع رقمية, SEO">
+    <meta name="author" content="Kirja Group">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph للظهور على وسائل التواصل -->
+    <meta property="og:title" content="Kirja Group | خدماتنا وأعمالنا">
+    <meta property="og:description"
+        content="استعرض خدمات Kirja Group في البرمجة، التصميم، تطوير المواقع، وحلول رقمية مبتكرة تساعدك على نجاح مشروعك.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://www.kirjagroup.com/services.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png">
+
+    <!-- خطوط وأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== Global Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== Header ===== */
+        .main-header {
+            background: #0f172a;
+            padding: 15px 0;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav a:hover {
+            color: #00ffa6;
+
+        }
+
+        .header-btn {
+            background: #00ffa6;
+            color: #001510;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .header-btn:hover {
+            background: #004b35;
+            color: #000000;
+        }
+
+        .menu-icon {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgb(15, 23, 42), rgba(15, 23, 42, 0)), url('https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775906/%D8%AE%D9%84%D9%81%D9%8A%D9%87_fwzgrf.png') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            color: #fff;
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 45px;
+            margin-bottom: 90px;
+        }
+
+        .hero-content h1 strong {
+            color: #00ffa6;
+
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 65px;
+            width: 400px;
+        }
+
+        .hero-btn {
+            background: #00ffa6;
+            color: #001510;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #01291d;
+            color: #fff;
+        }
+
+        /* ===== Services Section ===== */
+        .services {
+            padding: 150px 0 80px 0;
+            background-color: #f4f9ff;
+            border-radius: 100% 100% 0 0 / 150px 150px 0 0;
+            margin-top: -120px;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #0f172a;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* تعديل الجريد ليكون مرن */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            /* يظهر تحت بعضه في الشاشات الكبيرة تلقائياً */
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #f0f4f8;
+            padding: 40px;
+            transition: 0.3s;
+            width: 380px;
+            /* عرض ثابت */
+            min-width: 320px;
+            /* منع الانكماش */
+            flex-shrink: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: #008456;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            margin: auto;
+            width: 60%;
+            height: 5px;
+            background: #00bc7a;
+            border-radius: 30px;
+
+        }
+
+        /* ===== FAQ Section ===== */
+        .why-kirja {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #008456;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.4s ease;
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 15px;
+        }
+
+        /* ===== About Section ===== */
+        .about-us-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.731)),
+                url('https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775909/Gemini_Generated_Image_cs9tqzcs9tqzcs9t_uvxeve.png') center/cover no-repeat fixed;
+
+            /* لجعل القسم يملأ الشاشة */
+            min-height: 100vh;
+            width: 100%;
+
+            /* لتوسط المحتوى طولاً وعرضاً */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            /* تأمين مسافة بسيطة للموبايل */
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-title {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* ===== Works Section ===== */
+        .our-works {
+            padding: 100px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .works-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .work-card {
+            /* إضافة حواف ناعمة */
+            overflow: hidden;
+            width: 380px;
+            /* تمت إزالة الارتفاع الثابت للكارت بالكامل للسماح للنص بالظهور */
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* حاوية الصورة للحفاظ على الارتفاع */
+        .work-card img {
+            width: 100%;
+            height: 500px;
+            /* الارتفاع الذي طلبته ثابت */
+            object-fit: cover;
+            display: block;
+            margin-bottom: 30px;
+
+        }
+
+        /* تنسيق محتوى النص تحت الصورة */
+        .work-content {
+            padding: 25px;
+            text-align: right;
+            /* ليتناسب مع اللغة العربية */
+        }
+
+        .work-card h3 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 20px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .work-card:hover h3 {
+            color: #00ffa6;
+        }
+
+        .work-card p {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== View More Link (الستايل الاحترافي) ===== */
+        .view-more-container {
+            margin-top: 60px;
+        }
+
+        .view-more-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            color: #0f172a;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            position: relative;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .view-more-link i {
+            color: #00ffa6;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .view-more-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background: #00ffa6;
+            transition: all 0.4s ease;
+        }
+
+        .view-more-link:hover {
+            color: #00ffa6;
+        }
+
+        .view-more-link:hover::after {
+            width: 100%;
+        }
+
+        .view-more-link:hover i {
+            transform: translateX(-10px);
+            /* حركة السهم لليسار في RTL */
+        }
+
+        /* ===== Footer ===== */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffa6;
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00ffa6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .menu-icon {
+                display: block;
+                position: relative;
+                z-index: 1001;
+                /* فوق القائمة */
+            }
+
+            .hero {
+                height: 120vh;
+                background: linear-gradient(rgb(15, 23, 42), rgba(15, 23, 42, 0)), url('https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775886/download_fsawuh.jpg') center/cover no-repeat fixed;
+                display: flex;
+                align-items: center;
+                padding-top: 80px;
+            }
+
+            .header-btn {
+                background: #00ffa6;
+                color: #001510;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: 0.3s;
+                width: 60px;
+            }
+
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                /* مخفية تماماً جهة اليمين */
+                width: 280px;
+                height: 100vh;
+                background: #0f172a;
+                /* لون داكن */
+                flex-direction: column;
+                justify-content: center;
+                /* توسيط الروابط طولياً */
+                align-items: center;
+                gap: 30px;
+                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                padding: 0;
+            }
+
+            .nav.active {
+                right: 0;
+                /* تظهر عند إضافة الكلاس */
+            }
+
+            .header-btn {
+                display: none;
+                /* إخفاء زر التواصل في الموبايل أو يمكنك وضعه داخل القائمة */
+            }
+
+            /* تحسين شكل الروابط داخل القائمة */
+            .nav a {
+                font-size: 16px;
+                width: 200px;
+                justify-content: center;
+            }
+
+            /* منع التمرير الأفقي بسبب القائمة */
+            body {
+                overflow-x: hidden;
+            }
+        }
+
+        /* Hero */
+        .hero {
+            min-height: auto;
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+        }
+
+        .hero-buttons {
+            margin: auto;
+            max-width: 100%;
+        }
+
+        /* Horizontal Scroll */
+        .services-grid,
+        .works-grid {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: flex-start;
+            padding: 10px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .service-card,
+        .work-card {
+            min-width: 280px;
+            scroll-snap-align: center;
+        }
+
+        .services-grid::-webkit-scrollbar,
+        .works-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+
+            .footer-container {
+                text-align: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .nav a:hover {
+                color: #007bff;
+                /* لون عند التمرير */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-wrapper">
+            <a href="index.html" class="logo">
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775924/logo_lwngvs.png"
+                    alt="Kirja Group">
+                <span>Kirja Group</span>
+            </a>
+
+            <nav class="nav" id="navMenu">
+                <a href="home.html" style="color: #00ffa6;"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="#about"><i class="fa-solid fa-users"></i> من نحن</a>
+                <a href="service.html"><i class="fa-solid fa-gear"></i> الخدمات</a>
+                <a href="#work"><i class="fa-solid fa-briefcase"></i> أعمالنا</a>
+
+                <a href="contactus.html" class="header-btn" style="color: #001510;"><i
+                        class="fa-solid fa-paper-plane"></i> تواصل معنا</a>
+            </nav>
+
+
+            <div class="menu-icon" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>مرحباً بك في <strong>Kirja Group</strong></h1>
+                <div class="hero-buttons">
+                    <a href="how.html" class="hero-btn"> من الفكرة إلى التنفيذ</a>
+                    <a href="#kirja" class="hero-btn"> قيمتنا المضافة</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <p class="section-subtitle">
+                نحن لا نقدم مجرد خدمات رقمية، بل نصنع حلولاً متكاملة ترفع عملك إلى آفاق جديدة.
+                بتقنيات حديثة وتصاميم مبتكرة، نضمن لك حضوراً قوياً يترك انطباعاً لا يُنسى لدى جمهورك.
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-paint-brush service-icon"></i>
+                    <h3>تصميم إبداعي</h3>
+                    <p>
+                        نبتكر هويات بصرية متكاملة تعكس قيم علامتك التجارية. تصاميمنا تجمع بين الأناقة والبساطة لتترك
+                        انطباعاً احترافياً يدوم وتزيد من تميّزك في السوق.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-desktop service-icon"></i>
+                    <h3>تطوير الواجهات</h3>
+                    <p>
+                        نحول التصاميم إلى واجهات تفاعلية سريعة الاستجابة ومتوافقة مع جميع الأجهزة. نركز على سلاسة
+                        الاستخدام وأحدث التقنيات لضمان أداء احترافي يعكس قوة علامتك.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-lightbulb service-icon"></i>
+                    <h3>حلول مبتكرة</h3>
+                    <p>
+                        نقدم أفكاراً ذكية لتحسين تجربة المستخدم وزيادة فعالية مشروعك. حلولنا التقنية تضمن تميزك، تفاعل
+                        جمهورك، وتحقيق نتائج رقمية متميزة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <hr>
+
+    <section class="why-kirja" id="kirja">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">لماذا Kirja؟</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> ما الذي يميز خدمات Kirja Group؟
+                    </h3>
+                    <p class="faq-answer">نحن نجمع بين الدقة البرمجية المتطورة واللمسة الفنية الإبداعية، مما يضمن لك
+                        الحصول على منتج فريد لا يشبه المنافسين ويحقق أهدافك بدقة.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> هل تلتزم الشركة بالمواعيد
+                        النهائية؟</h3>
+                    <p class="faq-answer">الوقت هو رأس مالنا؛ لذا نضع جداول زمنية صارمة لكل مشروع ونلتزم بالتسليم في
+                        الموعد المحدد دون المساس بجودة العمل النهائية.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> هل توفرون دعماً فنياً بعد
+                        التسليم؟</h3>
+                    <p class="faq-answer">بكل تأكيد، نحن لا ينتهي دورنا عند التسليم؛ بل نوفر فترة دعم فني مستمر لضمان
+                        استقرار مشروعك وحل أي استفسارات تقنية قد تطرأ.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> هل المواقع التي يتم تطويرها
+                        متوافقة مع الموبايل؟</h3>
+                    <p class="faq-answer">نعم، جميع مشاريعنا تعتمد تقنية "Responsive Design" التي تجعل موقعك يعمل بمرونة
+                        تامة وسلاسة على كافة الشاشات والمتصفحات وأجهزة الموبايل.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> هل تقدمون حلولاً مخصصة حسب
+                        ميزانيتي؟</h3>
+                    <p class="faq-answer">نحن نهتم بنجاح مشروعك أياً كان حجمه، لذا نقدم باقات متنوعة وحلولاً مرنة تناسب
+                        مختلف الميزانيات مع الحفاظ على معايير الجودة العالية.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> كيف يتم ضمان حماية وخصوصية
+                        البيانات؟</h3>
+                    <p class="faq-answer">نتبع في Kirja Group أفضل الممارسات الأمنية وأحدث بروتوكولات التشفير لضمان
+                        حماية بيانات مشروعك ومعلومات عملائك ضد أي اختراقات.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> هل يمكنني التعديل على التصميم
+                        أثناء العمل؟</h3>
+                    <p class="faq-answer">نحن نعتمد سياسة الشفافية، حيث نطلعك على مراحل العمل دورياً ونسمح بعدد من
+                        التعديلات لضمان وصولنا للنتيجة التي ترضي طموحك تماماً.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> هل تساعدون في تحسين ظهور موقعي
+                        في جوجل (SEO)؟</h3>
+                    <p class="faq-answer">نحرص أثناء البرمجة على كتابة أكواد نظيفة وصديقة لمحركات البحث، مما يسهل على
+                        موقعك الأرشفة والظهور في النتائج الأولى بشكل أسرع.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> ما هي التقنيات التي تستخدمونها
+                        في العمل؟</h3>
+                    <p class="faq-answer">نواكب دائماً أحدث التقنيات العالمية في البرمجة والتصميم (مثل Html, Css,
+                        Javascript, وغيرها) لضمان أن يكون مشروعك مواكباً للمستقبل وقابلاً للتوسع.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question"><i class="fa-solid fa-circle-question"></i> كيف أبدأ مشروعي الأول معكم؟
+                    </h3>
+                    <p class="faq-answer">الأمر بسيط جداً؛ يمكنك التواصل معنا عبر زر "تواصل معنا" أو الواتساب، وسيقوم
+                        فريقنا بمناقشة فكرتك وتحويلها إلى خطة عمل احترافية فوراً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us-bg" id="about">
+        <div class="container about-container">
+            <h2 class="about-title">من نحن</h2>
+            <p class="about-text">
+                من نحن؟ نحن في Kirja Group لسنا مجرد شركة برمجة وتصميم، بل نحن شركاء نجاح لكل طموح يسعى لترك بصمة رقمية
+                فريدة. تأسست مجموعتنا لتكون الملاذ الأول للأعمال والشركات التي تبحث عن الجودة الفائقة والابتكار غير
+                المحدود. نحن نؤمن بأن كل مشروع هو قصة نجاح جديدة، ولذلك نسخر خبراتنا العميقة في مجالات البرمجة، التصميم،
+                وتطوير واجهات المستخدم لنقدم حلولاً ذكية تدمج بين جمال المظهر وقوة الأداء.
+            </p>
+            <a href="about.html" class="hero-btn"> المزيد <i class="fa-solid fa-arrow-right-long"></i> </a>
+        </div>
+    </section>
+
+    <section class="our-works" id="work">
+        <div class="container">
+            <h2 class="section-title">بعض أعمالنا</h2>
+            <hr class="hr">
+            <div class="works-grid">
+                <a href="https://koksi-kok-com-se41.vercel.app/">
+                    <div class="work-card">
+                        <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769776501/59dd2c4b44ee972b5ef63250b8921e87_qxir2p.jpg"
+                            alt="مشروع 1">
+                        <h3>موقع تجارة الكترونية </h3>
+                        <p>نبني لك متجراً إلكترونياً يتجاوز مجرد عرض المنتجات، حيث ندمج أنظمة الدفع الذكية مع تجربة تسوق
+                            سلسة وآمنة. </p>
+                    </div>
+                </a>
+                <a href="https://adamaber11.github.io/landing-Page/">
+                    <div class="work-card">
+                        <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775887/Design_Your_Success__Unlock_791_Business_Landing_Pages__uby1xv.jpg"
+                            alt="مشروع 1">
+                        <h3>تصميم موقع Landing Page </h3>
+                        <p>نصمم صفحات هبوط (Landing Pages) عالية التحويل، تهدف إلى تحويل الزوار إلى عملاء دائمين
+                        </p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="work-card">
+                        <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769776708/d822af96817d44aedb1bc0138f2feb0e_zayfpn.jpg"
+                            alt="مشروع 1">
+                        <h3>تصميم مواقع</h3>
+                        <p>واجهات عصرية وتجربة مستخدم سلسة.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="view-more-container">
+                <a href="portfolio.html" class="view-more-link">
+                    معرض الأعمال
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div>
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775924/logo_lwngvs.png"
+                    alt="Kirja Logo" class="footer-logo">
+                <p>نحن نبني المستقبل الرقمي بأدوات اليوم. جودة، سرعة، وابتكار.</p>
+            </div>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <a href="home.html">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="service.html">الخدمات</a>
+                <a href="portfolio.html">أعمالنا</a>
+            </div>
+            <div>
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1AMmSUq6UC/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kirja_group"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@Kirja-Group"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="https://wa.me/201284648993"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Kirja Group. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // تحديد العناصر
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+        const menuIcon = menuToggle.querySelector('i');
+
+        // وظيفة تبديل القائمة (فتح/إغلاق)
+        menuToggle.onclick = (e) => {
+            e.stopPropagation(); // منع انتقال النقرة للجسم (body) عند النقر على الزر نفسه
+            navMenu.classList.toggle("active");
+
+            // تبديل الأيقونة بين الهامبرجر والعلامة X
+            if (navMenu.classList.contains("active")) {
+                menuIcon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        };
+
+        // إغلاق القائمة عند النقر على أي مكان في الصفحة
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnButton = menuToggle.contains(event.target);
+
+            // إذا كانت القائمة مفتوحة والنقرة كانت خارج القائمة وخارج زر الهامبرجر
+            if (navMenu.classList.contains("active") && !isClickInsideMenu && !isClickOnButton) {
+                navMenu.classList.remove("active");
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+
+        // إغلاق القائمة أيضاً عند النقر على أي رابط داخلها (لتحسين تجربة المستخدم)
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.onclick = () => {
+                navMenu.classList.remove("active");
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            };
+        });
+
+        // منطق الأسئلة الشائعة (كما هو)
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

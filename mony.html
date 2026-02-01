@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الباقات والأسعار | Kirja Group</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== Global Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== Header ===== */
+        .main-header {
+            background: #0f172a;
+            padding: 15px 0;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav a:hover {
+            color: #00ffa6;
+        }
+
+        .header-btn {
+            background: #00ffa6;
+            color: #001510;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .header-btn:hover {
+            background: #01291d;
+            color: #fff;
+        }
+
+        /* ===== Hero Section ===== */
+        .pricing-hero {
+            height: 60vh;
+            background: linear-gradient(rgb(15, 23, 42), rgba(15, 23, 42, 0.459)), url('img/hero-bg.jpg') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .pricing-hero h1 {
+            font-size: 45px;
+        }
+
+        .pricing-hero h1 strong {
+            color: #00ffa6;
+        }
+
+        /* ===== Pricing Section (Modified for Images) ===== */
+        .pricing-section {
+            padding: 80px 0;
+            background-color: #f4f9ff;
+            position: relative;
+            z-index: 5;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: #00ffa6;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: start;
+        }
+
+        .price-card-img {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .price-card-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .price-card-img:hover img {
+            transform: scale(1.03);
+        }
+
+        /* تمييز الباقة الأكثر طلباً */
+        .price-card-img.popular {
+            border: 3px solid #00ffa6;
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .price-card-img:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-card-img.popular:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .badge {
+            background: #00ffa6;
+            color: #0f172a;
+            padding: 8px 20px;
+            border-radius: 0 0 15px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .card-action {
+            padding: 25px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .price-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #0f172a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .price-card-img.popular .price-btn {
+            background: #00ffa6;
+            color: #0f172a;
+        }
+
+        .price-btn:hover {
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        /* ===== Footer ===== */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffa6;
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 900px) {
+            .nav {
+                display: none;
+            }
+
+            .price-card-img.popular {
+                transform: scale(1);
+            }
+
+            .pricing-hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-wrapper">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Kirja Group">
+                <span>Kirja Group</span>
+            </a>
+            <nav class="nav">
+                <a href="home.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="about.html"><i class="fa-solid fa-users"></i> من نحن</a>
+                <a href="pricing.html" style="color: #00ffa6;"><i class="fa-solid fa-tags"></i> الباقات</a>
+                <a href="service.html"><i class="fa-solid fa-gear"></i> الخدمات</a>
+            </nav>
+            <a href="contactus.html" class="header-btn">اطلب الآن</a>
+        </div>
+    </header>
+
+    <section class="pricing-hero">
+        <div class="container">
+            <h1>استثمر في حضورك <strong>الرقمي</strong></h1>
+            <p>اختر الباقة المصورة التي تناسب طموحك ودع التنفيذ لنا.</p>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>خطط الأسعار</h2>
+                <p>حلولنا المتكاملة موضحة في الباقات أدناه</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card-img">
+                    <img src="img/pricing-1.jpg" alt="الباقة الاقتصادية">
+                    <div class="card-action">
+                        <a href="contactus.html" class="price-btn">اختار الباقة الاقتصادية</a>
+                    </div>
+                </div>
+
+                <div class="price-card-img popular">
+                    <div class="badge">الأكثر طلباً</div>
+                    <img src="img/اسعار العمل .jpeg" alt="باقة الأعمال">
+                    <div class="card-action">
+                        <a href="contactus.html" class="price-btn">اختار باقة الأعمال</a>
+                    </div>
+                </div>
+
+                <div class="price-card-img">
+                    <img src="img/pricing-3.jpg" alt="باقة VIP">
+                    <div class="card-action">
+                        <a href="contactus.html" class="price-btn">اختار باقة VIP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div>
+                <img src="img/logo.png" alt="Kirja Logo" class="footer-logo">
+                <p>نحن نبني المستقبل الرقمي بأدوات اليوم. جودة، سرعة، وابتكار.</p>
+            </div>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="pricing.html">الباقات</a>
+                <a href="contactus.html">تواصل معنا</a>
+            </div>
+            <div>
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kirja Group. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

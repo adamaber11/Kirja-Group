@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kirja Group هي شركة متخصصة في التصميم والبرمجة الرقمية. نبتكر تجارب رقمية جذابة وعملية لتمكين أعمالك في العالم الرقمي.">
+    <meta name="keywords"
+        content="Kirja Group, تصميم مواقع, برمجة واجهات, UI, UX, تطوير المواقع, تجربة رقمية, تصميم واجهات, تسويق رقمي">
+    <meta name="author" content="Kirja Group">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="من نحن | Kirja Group">
+    <meta property="og:description"
+        content="Kirja Group هي شركة متخصصة في التصميم والبرمجة الرقمية. نبتكر تجارب رقمية جذابة وعملية لتمكين أعمالك.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://www.kirjagroup.com/about.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="من نحن | Kirja Group">
+    <meta name="twitter:description"
+        content="Kirja Group هي شركة متخصصة في التصميم والبرمجة الرقمية. نبتكر تجارب رقمية جذابة وعملية لتمكين أعمالك.">
+    <meta name="twitter:image" content="img/logo.png">
+
+    <title>من نحن | Kirja Group</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== Global Reset (نفس ستايل الرئيسية) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            overflow-x: hidden;
+            color: #0f172a;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== Header (نفس ستايل الرئيسية) ===== */
+        .main-header {
+            background: #0f172a;
+            padding: 15px 0;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        /* تعديل بسيط ليتناسب مع اللوجو النصي */
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav a:hover {
+            color: #00ffa6;
+        }
+
+        .header-btn {
+            background: #00ffa6;
+            color: #001510;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .header-btn:hover {
+            background: #01291d;
+            color: #fff;
+        }
+
+        .menu-icon {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* ===== Hero Section (About Version) ===== */
+        .about-hero {
+            height: 90vh;
+            background: linear-gradient(rgb(15, 23, 42), rgba(15, 23, 42, 0.654)), url('img/Gemini_Generated_Image_xlllfcxlllfcxlll.png') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .about-hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .about-hero h1 strong {
+            color: #00ffa6;
+        }
+
+
+        .kht {
+            height: 5px;
+            width: 70%;
+            margin: auto;
+            background: #00a269;
+        }
+
+        /* ===== About Grid Section ===== */
+        .section-padding {
+            /* زدنا الحشو العلوي لترك مساحة للمنحنى العميق */
+            padding: 150px 0 80px 0;
+            background-color: #f4f9ff;
+
+
+            /* 100% تجعلها تبدأ من الأطراف، و 150px تحدد عمق القبة */
+            border-radius: 100% 100% 0 0 / 150px 150px 0 0;
+
+            /* سحب القسم للأعلى ليتداخل مع الهيرو سيكشن بشكل أجمل */
+            margin-top: -120px;
+            position: relative;
+            z-index: 5;
+
+            border: #00ffa6;
+
+            /* اختيار اختياري: إضافة ظل خفيف لإبراز المنحنى */
+            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 90%;
+            border-radius: 5px;
+        }
+
+        .about-content h2 {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: #00ffa6;
+        }
+
+        .about-content p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        /* ===== Vision Section (Alt Background) ===== */
+        .vision-section {
+            background: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .vision-card {
+            background: #f8fbfc;
+            padding: 40px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .vision-card i {
+            font-size: 40px;
+            color: #008456;
+            margin-bottom: 20px;
+        }
+
+        /* ===== FAQ Section (About Page) ===== */
+        .faq-section {
+            padding: 80px 0;
+            background-color: #f4f9ff;
+
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .faq-item:hover .faq-question {
+            color: #008456;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.4s ease;
+            color: #64748b;
+            padding-top: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 15px;
+        }
+
+        /* ===== Footer (نفس ستايل الرئيسية) ===== */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffa6;
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00ffa6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* 2. تنسيق البوكس الشخصي (Profile Box) */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .profile-box {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            text-align: center;
+            border-radius: 24px;
+            padding: 40px 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-wrapper {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 166, 0.3);
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .profile-box h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .profile-box p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+        }
+/* ================================================= linear-gradient
+   1. الإعدادات العامة (General Base Styles)
+   تطبق على كل الأجهزة وتضمن تجربة ناعمة
+   ================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden; /* لمنع التمرير العرضي المزعج في الموبايل */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================================================= 
+   2. شاشات الكمبيوتر واللاب توب (Desktop & Laptop)
+   Default Styles (Screen > 1024px)
+   ================================================= */
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none; /* مخفية في الكمبيوتر */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ================================================= 
+   3. أجهزة التابلت والمتوسطة (Tablets - Max 1024px)
+   ================================================= */
+@media (max-width: 1024px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* القائمة مخفية يميناً */
+        width: 280px;
+        height: 100vh;
+        background: #050a15;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav.active {
+        right: 0; /* تظهر القائمة عند النقر */
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .header-btn {
+        display: none; /* إخفاء الأزرار الكبيرة في الهيدر */
+    }
+
+    .vision-grid {
+        grid-template-columns: repeat(2, 1fr); /* عمودين فقط */
+        padding: 0 20px;
+    }
+}
+
+/* ================================================= 
+   4. الهواتف الذكية (Smartphones - Max 768px)
+   iPhone & High-end Androids
+   ================================================= */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: clamp(24px, 7vw, 32px);
+    }
+
+    /* تحويل الجاليري لسلايدر يدعم اللمس */
+    .gallery-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch; /* تمرير ناعم جداً لـ iPhone */
+    }
+
+    .gallery-item {
+        flex: 0 0 85%; /* كل كارد يأخذ 85% من العرض */
+        scroll-snap-align: center;
+        height: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    .profile-box {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .vision-grid {
+        grid-template-columns: 1fr; /* عمود واحد فقط */
+    }
+}
+
+/* ================================================= 
+   5. الهواتف الصغيرة (Small Phones - Max 480px)
+   ================================================= */
+@media (max-width: 480px) {
+    .nav {
+        width: 100%; /* القائمة تأخذ الشاشة كاملة في الموبايل الصغير */
+    }
+
+    .gallery-item {
+        flex: 0 0 90%;
+        height: 250px;
+    }
+
+    .about-hero {
+        padding: 40px 10px;
+    }
+
+    .about-hero h1 {
+        font-size: 22px;
+    }
+}
+
+
+/* الإعدادات الافتراضية للشاشات الكبيرة (كمبيوتر ولاب توب) */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* تقسيم الشاشة نصفين */
+    gap: 50px;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000000; /* أو اللون الذي تفضله */
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+/* =================================================
+   تعديلات الشاشات الصغيرة (موبايل وتابلت)
+   ================================================= */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* تحويل العرض ليكون عنصر واحد فوق الآخر */
+        text-align: center; /* توسيط النصوص للموبايل */
+        gap: 30px;
+        padding: 40px 15px;
+    }
+
+    .about-image {
+        order: -1; /* يجعل الصورة تظهر فوق النص في الموبايل */
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .about-image img {
+        max-width: 90%; /* تصغير بسيط للصورة لتبدو أرشق */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content h2 {
+        font-size: 24px;
+    }
+    
+    .section-padding {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+    .footer-logo{
+        margin: auto;
+    }
+
+     .nav a:hover {
+        color: #007bff; /* لون عند التمرير */
+    }
+    
+}
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-wrapper">
+            <a href="index.html" class="logo">
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775924/logo_lwngvs.png" alt="Kirja Group">
+                <span>Kirja Group</span>
+            </a>
+            <nav class="nav" id="navMenu">
+                <a href="home.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="about.html" style="color: #00ffa6;"><i class="fa-solid fa-users"></i> من نحن</a>
+                <a href="service.html"><i class="fa-solid fa-gear"></i> الخدمات</a>
+                <a href="portfolio.html"><i class="fa-solid fa-briefcase"></i> أعمالنا</a>
+                <a href="contactus.html" class="header-btn" style="color: #000000;">تواصل معنا</a>
+            </nav>
+            <div class="menu-icon" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>من نحن في <strong>Kirja Group</strong></h1>
+            "نحن في Kirja Group شركاء ابتكار متخصصون في صياغة التجارب الرقمية الفريدة، حيث ندمج بين دقة البرمجة المتطورة
+            واللمسات الفنية الإبداعية لبناء هويات رقمية استثنائية. نهدف إلى تمكين الأعمال من خلال حلول تقنية ذكية
+            وتصاميم واجهات عصرية تضمن لعملائنا حضوراً قوياً وتأثيراً مستداماً في السوق الرقمي."
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container about-grid">
+            <div class="about-content">
+                <h2>من هي Kirja Group؟</h2>
+                <p>Kirja Group هي شركة متخصصة في تصميم وبرمجة الواجهات الرقمية، نعمل على تحويل الأفكار إلى تجارب حية
+                    وجذابة وعملية تخدم أهدافك التجارية. نؤمن أن الموقع الناجح هو مزيج بين التصميم الفني المبهر والأداء
+                    التقني السريع، وهذا ما نوفره لعملائنا بكل شغف واحترافية.</p>
+
+                <p>Kirja Group is a premier digital agency specializing in UI/UX design and web development. We
+                    transform creative ideas into vivid, engaging, and functional digital experiences that drive your
+                    business goals. We believe a successful website is the perfect blend of stunning visual design and
+                    high-speed technical performance—delivered with passion and professional excellence.</p>
+
+                <a href="contactus.html" class="header-btn" style="display:inline-block; margin-top:10px;">ابدأ مشروعك
+                    معنا</a>
+            </div>
+            <div class="about-image">
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775917/Gemini_Generated_Image_17ocfe17ocfe17oc_qd48r8.png" alt="Kirja Team">
+            </div>
+        </div>
+    </section>
+
+    <hr class="kht">
+
+    <section class="vision-section">
+        <div class="container">
+            <h2> ركائزنا </h2>
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>رؤيتنا</h3>
+                    <p>أن نكون الخيار الرقمي الأول في المنطقة من خلال تقديم جودة استثنائية وابتكار لا يتوقف في كل مشروع
+                        ننفذه.</p>
+                </div>
+
+                <div class="vision-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>رسالتنا</h3>
+                    <p>تقديم حلول تقنية واضحة، آمنة، ومتجاوبة تساعد شركاءنا على التميز والنمو المستدام في العالم الرقمي
+                        المتغير.</p>
+                </div>
+
+                <div class="vision-card">
+                    <i class="fa-solid fa-gem"></i>
+                    <h3>قيمنا</h3>
+                    <p>الشفافية، الالتزام بالمواعيد، والإبداع المستمر هي الركائز التي نبني عليها علاقتنا مع كل عميل
+                        نخدمه.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:40px;">الأسئلة الشائعة</h2>
+            <div style="max-width:900px; margin:auto;">
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ما هي الخدمات التي تقدمها Kirja Group؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        تقدم Kirja Group خدمات متكاملة تشمل تطوير مواقع الويب (Front-End و Back-End)،
+                        تصميم الجرافيك، مونتاج وتحرير الفيديو، بالإضافة إلى مساعدة رواد الأعمال
+                        والطموحين على بناء وتطوير مشاريعهم الرقمية باحترافية وبمقابل مادي مناسب.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل يمكنني بدء مشروع أو موقع بميزانية بسيطة؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+
+                    <p class="faq-answer">
+                        نعم، في Kirja Group نحرص على مساعدة أي شخص طموح على بدء مشروعه أو موقعه
+                        بميزانية مناسبة، مع تقديم حلول مرنة تناسب احتياجاتك وتساعدك على النمو
+                        خطوة بخطوة.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل تقدم Kirja Group دعمًا بعد تسليم المشروع؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        نعم، نوفر دعمًا فنيًا بعد تسليم المشروع لضمان عمل الموقع أو الخدمة
+                        بكفاءة، مع إمكانية التطوير أو التحديث حسب احتياجاتك في أي وقت.
+                    </p>
+                </div>
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        كيف يتم تحديد تكلفة المشروع؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        يتم تحديد تكلفة المشروع بناءً على نوع الخدمة المطلوبة، حجم المشروع،
+                        والميزات التي يحتاجها العميل، مع الحرص على تقديم أفضل جودة ممكنة
+                        مقابل سعر عادل ومناسب.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل يمكن تطوير أو تعديل مشروع قائم بالفعل؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        نعم، يمكننا العمل على تطوير أو تحسين مشروعك الحالي سواء من حيث التصميم،
+                        الأداء، أو إضافة ميزات جديدة تواكب متطلبات السوق وتساعدك على النمو.
+                    </p>
+                </div>
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل أحتاج إلى خبرة تقنية للتعامل مع المشروع؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        لا، لست بحاجة لأي خبرة تقنية، حيث نحرص في Kirja Group على تبسيط كل الخطوات
+                        وشرحها للعميل، مع إدارة المشروع بالكامل من البداية حتى التسليم.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل يمكن الجمع بين أكثر من خدمة في مشروع واحد؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        نعم، يمكنك الجمع بين أكثر من خدمة مثل تطوير الموقع، تصميم الجرافيك،
+                        ومونتاج الفيديو في مشروع واحد متكامل، مما يضمن هوية موحدة ونتيجة
+                        احترافية أقوى.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        كيف أبدأ العمل مع Kirja Group؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        يمكنك البدء بالتواصل معنا عبر صفحة "تواصل معنا" أو من خلال وسائل التواصل
+                        المتاحة، وسنقوم بمناقشة فكرتك وتقديم أفضل الحلول المناسبة لبدء مشروعك
+                        في أسرع وقت.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل تلتزم Kirja Group بمواعيد تسليم محددة؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        نعم، نحرص دائمًا على الالتزام بمواعيد التسليم المتفق عليها،
+                        مع متابعة مستمرة مع العميل طوال فترة التنفيذ لضمان أفضل نتيجة.
+                    </p>
+                </div>
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل تقدمون استشارات لتطوير الأفكار والمشاريع؟
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="faq-answer">
+                        نعم، نقدم استشارات شخصية لمساعدتك على تطوير فكرتك أو مشروعك،
+                        مع نصائح عملية وخطة واضحة تساعدك على النجاح وتحقيق أهدافك
+                        بأفضل شكل ممكن.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div>
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775924/logo_lwngvs.png" alt="Kirja Logo" class="footer-logo">
+                <p>نحن نبني المستقبل الرقمي بأدوات اليوم. جودة، سرعة، وابتكار.</p>
+            </div>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <a href="home.html">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="service.html">الخدمات</a>
+                <a href="portfolio.html">أعمالنا</a>
+            </div>
+            <div>
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1AMmSUq6UC/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kirja_group"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@Kirja-Group"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="https://wa.me/201284648993"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Kirja Group. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    const menuIcon = menuToggle.querySelector('i');
+
+    // 1. فتح وإغلاق القائمة عند الضغط على الهامبرجر
+    menuToggle.onclick = (e) => {
+        e.stopPropagation(); // يمنع النبضة من الوصول للـ body
+        navMenu.classList.toggle("active");
+        
+        // تبديل الأيقونة من هامبرجر لعلامة X
+        if (navMenu.classList.contains("active")) {
+            menuIcon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        }
+    };
+
+    // 2. إغلاق القائمة عند الضغط في أي مكان خارجها
+    document.addEventListener('click', (event) => {
+        // إذا كانت القائمة مفتوحة والضغط تم خارج القائمة وخارج الزر نفسه
+        if (navMenu.classList.contains("active") && 
+            !navMenu.contains(event.target) && 
+            !menuToggle.contains(event.target)) {
+            
+            navMenu.classList.remove("active");
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        }
+    });
+
+    // 3. إغلاق القائمة عند الضغط على أي رابط (عشان يروح للسكشن والقائمة تقفل)
+    const links = document.querySelectorAll('.nav a');
+    links.forEach(link => {
+        link.onclick = () => {
+            navMenu.classList.remove("active");
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        };
+    });
+
+    // منطق الـ FAQ (الأسئلة الشائعة)
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
+</script>
+
+</body>
+
+</html>

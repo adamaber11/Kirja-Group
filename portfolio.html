@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- أساسي -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأعمال | Kirja Group</title>
+    <meta name="description"
+        content="معرض أعمال Kirja Group - أفضل تصاميم مواقع، جرافيك ديزاين وفيديوهات إبداعية. شاهد مشاريعنا وانطلق بأفكارك الرقمية.">
+    <meta name="keywords" content="Kirja Group, تصميم مواقع, جرافيك, مونتاج, أعمال رقمية, Portfolio">
+    <meta name="author" content="Kirja Group">
+
+    <!-- Open Graph للفيسبوك واللينكدإن -->
+    <meta property="og:title" content="معرض الأعمال | Kirja Group">
+    <meta property="og:description"
+        content="معرض أعمال Kirja Group - أفضل تصاميم مواقع، جرافيك ديزاين وفيديوهات إبداعية. شاهد مشاريعنا وانطلق بأفكارك الرقمية.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://yourwebsite.com/portfolio.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="معرض الأعمال | Kirja Group">
+    <meta name="twitter:description"
+        content="معرض أعمال Kirja Group - أفضل تصاميم مواقع، جرافيك ديزاين وفيديوهات إبداعية. شاهد مشاريعنا وانطلق بأفكارك الرقمية.">
+    <meta name="twitter:image" content="img/logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== 1. Global Reset & Variables ===== */
+        :root {
+            --primary-green: #00e293;
+            --dark-navy: #0f172a;
+            --light-bg: #f4f9ff;
+            --card-bg-glass: rgba(255, 255, 255, 0.05);
+            --text-gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--dark-navy);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== 2. Header & Navigation ===== */
+        .main-header {
+            background: var(--dark-navy);
+            padding: 15px 0;
+            width: 100%;
+            /* يثبت الهيدر أعلى الشاشة */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        .nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav a:hover {
+            color: var(--primary-green);
+        }
+
+        .header-btn {
+            background: var(--primary-green);
+            color: #001510;
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .header-btn:hover {
+            background: #01bd7a;
+            /* درجة أغمق قليلاً عند التفاعل */
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .menu-icon {
+            display: none;
+            /* مخفية في الشاشات الكبيرة */
+            color: #fff;
+            font-size: 26px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* ===== 3. Hero Section ===== */
+        .about-hero {
+            height: 90vh;
+            /* الخلفية في الشاشات الكبيرة */
+            background: linear-gradient(var(--dark-navy), rgba(15, 23, 42, 0.654)),
+                url('img/download (1).jpg') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .about-hero h1 {
+            font-size: 48px;
+            /* تكبير بسيط للعنوان في الشاشات الكبيرة */
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .about-hero h1 strong {
+            color: var(--primary-green);
+        }
+
+        .kht {
+            height: 5px;
+            width: 150px;
+            /* عرض ثابت وأجمل للخط تحت العنوان */
+            margin: 0 auto;
+            background: var(--primary-green);
+            border-radius: 10px;
+        }
+
+
+        /* ===== 4. Web Works Section ===== */
+        .our-works {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #ffffff;
+            overflow: hidden;
+            /* لمنع ظهور شريط التمرير الخارجي */
+        }
+
+        /* تنسيق العنوان والخط السفلي */
+        .name {
+            margin-top: 60px;
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--dark-navy);
+            margin-bottom: 10px;
+            margin-right: 100px;
+            /* القيمة الافتراضية للشاشات الكبيرة */
+        }
+
+        .start {
+            width: 200px;
+            height: 5px;
+            background-color: #00a269;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            margin-right: 100px;
+            border: none;
+        }
+
+        /* شبكة الأعمال */
+        .works-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .work-card {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 15px;
+            /* حواف ناعمة للصورة */
+        }
+
+        .work-content {
+            padding: 20px;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .work-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-navy);
+            margin-bottom: 15px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+
+        .work-card:hover h3 {
+            color: var(--primary-green);
+        }
+
+        .work-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+
+
+        /* ===== 5. Graphic Gallery Section ===== */
+        .graphic-gallery {
+            padding: 60px 0;
+            background-color: #ffffff;
+            overflow: hidden;
+            /* لمنع ظهور شريط التمرير الأفقي العام */
+        }
+
+        /* الشبكة الأساسية للشاشات الكبيرة */
+        .graphic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            padding: 0 5%;
+        }
+
+        .graphic-item {
+            position: relative;
+            border-radius: 15px;
+            /* زوايا أكثر نعومة */
+            overflow: hidden;
+            height: 350px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .graphic-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* طبقة الغطاء عند التحويم */
+        .graphic-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.85);
+            /* درجة داكنة فخمة */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.4s ease;
+            padding: 20px;
+        }
+
+        .overlay-text {
+            text-align: center;
+            color: #fff;
+            transform: translateY(30px);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .overlay-text h4 {
+            font-size: 22px;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .overlay-text span {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+
+        /* ===== 6. Pro Video Studio Section ===== */
+        :root {
+            --primary-green: #00ffa6;
+            --card-bg-glass: rgba(255, 255, 255, 0.05);
+        }
+
+        .pro-video-studio {
+            padding: 80px 5%;
+            /* استخدام نسبة مئوية للـ padding الجانبي */
+            background: #050a15;
+            color: #fff;
+        }
+
+
+
+        .header-content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-content h2 {
+            font-size: clamp(28px, 5vw, 40px);
+            /* حجم خط مرن يتغير حسب الشاشة */
+        }
+
+        .header-content span {
+            color: var(--primary-green);
+        }
+
+        /* التعديل الأساسي هنا للـ Responsive */
+        .studio-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            /* عمود للفيديو وعمود للقائمة */
+            gap: 25px;
+            background: var(--card-bg-glass);
+            padding: 20px;
+            border-radius: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #000;
+        }
+
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover;
+        }
+
+        .video-info h3 {
+            color: var(--primary-green);
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .video-playlist {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            max-height: 500px;
+            /* تحديد ارتفاع للقائمة */
+        }
+
+        .playlist-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .playlist-items {
+            padding: 10px;
+            overflow-y: auto;
+            /* سكرول داخلي للقائمة */
+        }
+
+        /* تخصيص شكل السكرول بار */
+        .playlist-items::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .playlist-items::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 10px;
+        }
+
+        .playlist-card {
+            display: flex;
+            gap: 12px;
+            padding: 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .playlist-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .playlist-card.active {
+            background: rgba(0, 255, 166, 0.1);
+            border-color: var(--primary-green);
+        }
+
+        .thumb {
+            width: 100px;
+            height: 60px;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .playlist-card h4 {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.4;
+            display: -webkit-box;
+            /* قص النص الطويل */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ===== 7. Success Stories Section ===== */
+        .success-stories {
+            padding: 80px 5%;
+            /* مسافة جانبية مرنة */
+            background: #f8fafc;
+            direction: rtl;
+            overflow: hidden;
+            /* لمنع أي سكرول عرضي مفاجئ */
+        }
+
+        .success-stories .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-center {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 15px;
+        }
+
+        .top-tag {
+            background: rgba(0, 255, 166, 0.1);
+            color: #008f5d;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            /* لضمان ظهور الـ padding صح */
+        }
+
+        /* استخدام clamp لجعل العناوين مرنة بدون Media Queries كتير */
+        .main-title,
+        .main2-title {
+            font-size: clamp(24px, 5vw, 36px);
+            margin-top: 15px;
+            line-height: 1.3;
+        }
+
+        .main-title {
+            color: var(--light-bg);
+        }
+
+        .main2-title {
+            color: var(--dark-navy);
+        }
+
+        .main-title span {
+            color: var(--primary-green);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* تظبيط الجريد ليكون مرن جداً */
+        .projects-grid {
+            display: grid;
+            /* الميزة هنا إن الكروت هتصغر لحد 300px وبعدين تنزل تحت بعض أوتوماتيك */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 10px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            /* عشان كل الكروت تبقى طول واحد */
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-img {
+            position: relative;
+            height: 220px;
+            width: 100%;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-tag {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: var(--dark-navy, #0f172a);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            z-index: 2;
+        }
+
+        .project-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            /* بيخلي المحتوى يملأ الفراغ والـ button يبقى تحت دايماً */
+        }
+
+        .project-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--dark-navy, #0f172a);
+        }
+
+        .project-content .summary {
+            font-size: 15px;
+            color: #64748b;
+            /* لون رمادي مريح للعين */
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .project-stats {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+            border-top: 1px solid #f1f5f9;
+            margin-top: auto;
+            /* دفع الإحصائيات لأسفل الكارت */
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat span {
+            display: block;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary-green, #00ffa6);
+        }
+
+        .stat small {
+            color: #94a3b8;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .view-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background: #f1f5f9;
+            color: var(--dark-navy, #0f172a);
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 15px;
+        }
+
+        .project-card:hover .view-btn {
+            background: var(--primary-green, #00ffa6);
+            color: #000;
+        }
+
+
+
+        /* ===== Footer ===== */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffa6;
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00ffa6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* ================================================================
+   10. FULL RESPONSIVE SYSTEM (Mobile & Tablet)
+   ================================================================ */
+
+        /* ================= MOBILE + TABLET ================= */
+        @media (max-width: 1024px) {
+
+            /* --- Header & Nav --- */
+            .menu-icon {
+                display: block;
+            }
+
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--dark-navy, #050a15);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                z-index: 999;
+            }
+
+            .nav.active {
+                right: 0;
+            }
+
+            /* --- Hero Section --- */
+            .about-hero {
+                height: auto;
+                min-height: 70vh;
+                padding: 100px 20px;
+                background:
+                    linear-gradient(var(--dark-navy), rgba(15, 23, 42, 0.7)),
+                    url('img/download.jpg') center / cover no-repeat;
+            }
+
+            .about-hero h1 {
+                font-size: clamp(24px, 6vw, 32px);
+            }
+
+            /* --- Universal Horizontal Scroll --- */
+            /* Horizontal Scroll */
+            .services-grid,
+            .works-grid {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 10px;
+                scroll-snap-type: x mandatory;
+            }
+
+            .service-card,
+            .work-card {
+                min-width: 280px;
+                scroll-snap-align: center;
+            }
+
+            .services-grid::-webkit-scrollbar,
+            .works-grid::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .graphic-grid,
+        .projects-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 20px;
+            padding: 20px 5%;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .works-grid::-webkit-scrollbar,
+        .graphic-grid::-webkit-scrollbar,
+        .projects-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* --- Cards (Mobile Default) --- */
+        .work-card,
+        .project-card,
+        .graphic-item {
+            flex: 0 0 85%;
+            max-width: 350px;
+            scroll-snap-align: center;
+            min-height: 400px;
+        }
+
+        /* --- Graphic Section --- */
+        .graphic-item {
+            height: 450px;
+        }
+
+        .graphic-overlay {
+            opacity: 1;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .overlay-text {
+            transform: translateY(0);
+        }
+
+        /* --- Video Studio --- */
+        .studio-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .video-playlist {
+            max-height: 400px;
+        }
+
+
+        /* ================= TABLET ONLY ================= */
+        @media (min-width: 600px) and (max-width: 1024px) {
+
+            .work-card,
+            .project-card,
+            .graphic-item {
+                flex: 0 0 45%;
+            }
+        }
+
+        /* ================= MOBILE ONLY ================= */
+        @media (max-width: 768px) {
+
+            .pro-video-studio {
+                padding: 60px 15px;
+            }
+
+            .studio-wrapper {
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .thumb {
+                width: 80px;
+                height: 50px;
+            }
+        }
+
+        /* ================= SMALL MOBILE ================= */
+        @media (max-width: 480px) {
+
+            .work-card,
+            .project-card {
+                flex: 0 0 88%;
+            }
+
+            .project-img {
+                height: 180px;
+            }
+        }
+
+        /* ================= HOVER (DESKTOP ONLY) ================= */
+        @media (hover: hover) {
+
+            .graphic-item:hover img {
+                transform: scale(1.1);
+            }
+
+            .graphic-item:hover .graphic-overlay {
+                opacity: 1;
+            }
+
+            .project-card:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* الزر بتصميم هادئ ومتوافق مع الهوية */
+        .btn-kirja {
+            background: var(--primary-green);
+            /* استخدام خلفية الجيلاس من متغيراتك */
+            border: 1px solid rgba(0, 226, 147, 0.3);
+            /* إطار أخضر خفيف جداً */
+            border-radius: 8px;
+            /* حواف ناعمة وليست دائرية بالكامل لتعطي طابعاً احترافياً */
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            backdrop-filter: blur(5px);
+            /* تأثير ضبابي هادئ خلف الزر */
+        }
+
+        .btn-kirja a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 28px;
+            color: var(--primary-green);
+            /* النص بلون أخضر الهوية ليكون واضحاً */
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* تأثير التمرير (Hover) - انتقال هادئ للون الأساسي */
+        .btn-kirja:hover {
+            background: var(--primary-green);
+            /* يتحول الزر بالكامل للون الأخضر */
+            border-color: var(--primary-green);
+            box-shadow: 0 8px 20px rgba(0, 226, 147, 0.2);
+            /* توهج أخضر خفيف جداً */
+            transform: translateY(-2px);
+        }
+
+        .btn-kirja:hover a {
+            color: var(--dark-navy);
+            /* ينعكس لون النص للداكن ليظل مقروءاً */
+        }
+
+        /* التجاوب مع الموبايل */
+        @media (max-width: 768px) {
+            .btn-kirja a {
+                padding: 10px 22px;
+                font-size: 15px;
+            }
+        }
+         .nav a:hover {
+        color: #007bff; /* لون عند التمرير */
+    }
+    @media (max-width: 768px) {
+
+    .footer-container {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-wrapper">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Kirja Group">
+                <span>Kirja Group</span>
+            </a>
+            <nav class="nav" id="navMenu">
+                <a href="home.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="about.html"> <i class="fa-solid fa-users"></i>من نحن</a>
+                <a href="service.html"><i class="fa-solid fa-gear"></i> الخدمات</a>
+                <a href="portfolio.html" style="color: #00ffa6;"><i class="fa-solid fa-briefcase"></i>اعمالنا</a>
+                <button class="btn-kirja">
+                    <a href="contactus.html" style="color: #000;">
+                        <i class="fa-regular fa-envelope" style="color: #000;"></i> تواصل معنا
+                    </a>
+                </button>
+            </nav>
+            <div class="menu-icon" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1> بعض الاعمال من <strong>Kirja Group</strong></h1>
+            شاهد كيف نحول الأفكار الطموحة إلى واقع رقمي مبهر وشديد الاحترافية
+        </div>
+    </section>
+
+    <section class="works-section">
+        <h1 class="name">مواقع Frontend</h1>
+        <hr class="start">
+        <div class="container">
+            <div class="works-grid">
+
+                <a href="https://koksi-kok-com-se41.vercel.app/" class="work-card-link">
+                    <div class="work-card">
+                        <img src="img/e-commers.jpg" alt="مشروع 1">
+                        <h3>موقع تجارة الكترونية</h3>
+                        <p>نبني لك متجراً إلكترونياً يتجاوز مجرد عرض المنتجات، حيث ندمج أنظمة الدفع الذكية مع تجربة تسوق
+                            سلسة وآمنة.</p>
+                    </div>
+                </a>
+
+                <a href="https://adamaber11.github.io/landing-Page/" class="work-card-link">
+                    <div class="work-card">
+                        <img src="img/Design Your Success_ Unlock 791+ Business Landing Pages_.jpg" alt="مشروع 2">
+                        <h3>تصميم موقع Landing Page</h3>
+                        <p>نصمم صفحات هبوط (Landing Pages) عالية التحويل، تهدف إلى تحويل الزوار إلى عملاء دائمين.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="work-card-link">
+                    <div class="work-card">
+                        <img src="img/Your Health Journey Starts Here.jpg" alt="مشروع 3">
+                        <h3>تصميم مواقع تعريفية</h3>
+                        <p>واجهات عصرية وتجربة مستخدم سلسة تعكس هوية شركتك بأفضل صورة ممكنة للجمهور.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="graphic-gallery">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">إبداعاتنا في <span>الجرافيك ديزاين</span></h2>
+            <p class="section-subtitle"
+                style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+                نحول الأفكار إلى لوحات فنية تنطق بالجمال، من تصميم الهويات البصرية إلى الإعلانات المبتكرة.
+            </p>
+
+            <div class="graphic-grid">
+                <div class="graphic-item">
+                    <img src="img/download (1).jpg" alt="تصميم هوية بصرية">
+                    <div class="graphic-overlay">
+                        <div class="overlay-text">
+                            <h4>تصميم هوية بصرية</h4>
+                            <span>Branding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="graphic-item">
+                    <img src="img/Gemini_Generated_Image_ngj2iyngj2iyngj2.png" alt="تصميم سوشيال ميديا">
+                    <div class="graphic-overlay">
+                        <div class="overlay-text">
+                            <h4>تصميمات سوشيال ميديا</h4>
+                            <span>Social Media</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="graphic-item">
+                    <img src="img/Gemini_Generated_Image_k6zzmvk6zzmvk6zz.png" alt="تصميم شعار">
+                    <div class="graphic-overlay">
+                        <div class="overlay-text">
+                            <h4>تصميم لوجو احترافي</h4>
+                            <span>Logo Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="graphic-item">
+                    <img src="img/Gemini_Generated_Image_x929dtx929dtx929.png" alt="تصميم مطبوعات">
+                    <div class="graphic-overlay">
+                        <div class="overlay-text">
+                            <h4>تصميم مطبوعات</h4>
+                            <span>Print Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="pro-video-studio">
+        <div class="container">
+            <div class="header-content">
+                <h2 class="main-title">استوديو <span>المونتاج الإبداعي</span></h2>
+                <p>شاهد كيف نحول اللقطات الخام إلى تحف بصرية تروي قصتك</p>
+            </div>
+
+            <div class="studio-wrapper">
+                <!-- الفيديو الرئيسي -->
+                <div class="video-main-frame">
+                    <div class="video-container">
+                        <video id="heroVideo" controls autoplay muted playsinline></video>
+                    </div>
+                    <div class="video-info">
+                        <h3 id="currentVideoTitle">عنوان الفيديو</h3>
+                        <p id="currentVideoDesc">وصف الفيديو</p>
+                    </div>
+                </div>
+
+                <!-- البلاي ليست -->
+                <div class="video-playlist">
+                    <div class="playlist-header">
+                        <span>المشاريع الأخيرة</span>
+                        <span id="videoCounter">5 فيديوهات</span>
+                    </div>
+
+                    <div class="playlist-items">
+
+                        <!-- فيديو 1 -->
+                        <div class="playlist-card active"
+                            onclick="playVideo(this,'PUT_VIDEO_LINK_HERE_1','عنوان الفيديو الأول','وصف الفيديو الأول')">
+                            <div class="thumb">
+                                <img src="img/Gemini_Generated_Image_17ocfe17ocfe17oc.png" alt="">
+                                <div class="play-badge"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="details">
+                                <h4>فيديو رقم 1</h4>
+                                <span>00:45</span>
+                            </div>
+                        </div>
+
+                        <!-- فيديو 2 -->
+                        <div class="playlist-card"
+                            onclick="playVideo(this,'PUT_VIDEO_LINK_HERE_2','اروع فديو عينك هتشوفه ','وصف الفيديو الثاني')">
+                            <div class="thumb">
+                                <img src="img/Gemini_Generated_Image_6uiqi36uiqi36uiq.png" alt="">
+                                <div class="play-badge"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="details">
+                                <h4>فيديو رقم 2</h4>
+                                <span>01:10</span>
+                            </div>
+                        </div>
+
+                        <!-- فيديو 3 -->
+                        <div class="playlist-card"
+                            onclick="playVideo(this,'PUT_VIDEO_LINK_HERE_3','عنوان الفيديو الثالث','وصف الفيديو الثالث')">
+                            <div class="thumb">
+                                <img src="img/Gemini_Generated_Image_93ol1693ol1693ol.png" alt="">
+                                <div class="play-badge"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="details">
+                                <h4>فيديو رقم 3</h4>
+                                <span>00:30</span>
+                            </div>
+                        </div>
+
+                        <!-- فيديو 4 -->
+                        <div class="playlist-card"
+                            onclick="playVideo(this,'PUT_VIDEO_LINK_HERE_4','عنوان الفيديو الرابع','وصف الفيديو الرابع')">
+                            <div class="thumb">
+                                <img src="img/Gemini_Generated_Image_aj7mcraj7mcraj7m.png" alt="">
+                                <div class="play-badge"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="details">
+                                <h4>فيديو رقم 4</h4>
+                                <span>02:00</span>
+                            </div>
+                        </div>
+
+                        <!-- فيديو 5 -->
+                        <div class="playlist-card"
+                            onclick="playVideo(this,'PUT_VIDEO_LINK_HERE_5','عنوان الفيديو الخامس','وصف الفيديو الخامس')">
+                            <div class="thumb">
+                                <img src="img/Gemini_Generated_Image_cdruhxcdruhxcdru.png" alt="">
+                                <div class="play-badge"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="details">
+                                <h4>فيديو رقم 5</h4>
+                                <span>01:25</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="success-stories">
+        <div class="container">
+            <div class="header-center">
+                <span class="top-tag">ليست مجرد اكواد فقط</span>
+                <h2 class="main2-title">كيف ساعدنا شركاءنا على <span>بناء مشاريعهم؟</span></h2>
+                <p>نحن لا ننفذ فقط، بل نخطط، نصمم، ونقود مشروعك نحو النجاح من الفكرة إلى الواقع.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500"
+                            alt="تخطيط مشاريع">
+                        <div class="project-tag">استشارات وتخطيط</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>منصة إي-كومرس متكاملة</h3>
+                        <p class="summary">ساعدنا العميل في دراسة السوق وتحديد الجمهور المستهدف قبل البدء في البرمجة.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat"><span>+150%</span><small>نمو المبيعات</small></div>
+                            <div class="stat"><span>3 شهور</span><small>مدة التنفيذ</small></div>
+                        </div>
+                        <button class="view-btn">تفاصيل الخطة <i class="fas fa-arrow-left"></i></button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500"
+                            alt="بناء علامة تجارية">
+                        <div class="project-tag">بناء هوية</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>تطوير شركة ناشئة (Startup)</h3>
+                        <p class="summary">وضعنا استراتيجية الهوية البصرية وخطة الانتشار الرقمي لشركة خدمات لوجستية.</p>
+                        <div class="project-stats">
+                            <div class="stat"><span>+50k</span><small>مستخدم نشط</small></div>
+                            <div class="stat"><span>احترافي</span><small>تقييم البراند</small></div>
+                        </div>
+                        <button class="view-btn">تفاصيل الخطة <i class="fas fa-arrow-left"></i></button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1553484771-047a44eee27b?auto=format&fit=crop&w=500"
+                            alt="تطوير تقني">
+                        <div class="project-tag">هيكلة تقنية</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>تحول رقمي لمؤسسة تعليمية</h3>
+                        <p class="summary">إعادة بناء الأنظمة الداخلية وتحويلها لنظام سحابي يسهل إدارة آلاف الطلاب.</p>
+                        <div class="project-stats">
+                            <div class="stat"><span>90%</span><small>توفير وقت</small></div>
+                            <div class="stat"><span>سحابي</span><small>نوع النظام</small></div>
+                        </div>
+                        <button class="view-btn">تفاصيل الخطة <i class="fas fa-arrow-left"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div>
+                <img src="img/logo.png" alt="Kirja Logo" class="footer-logo">
+                <p>نحن نبني المستقبل الرقمي بأدوات اليوم. جودة، سرعة، وابتكار.</p>
+            </div>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <a href="home.html">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="service.html">الخدمات</a>
+                <a href="portfolio.html">أعمالنا</a>
+            </div>
+            <div>
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1AMmSUq6UC/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kirja_group"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@Kirja-Group"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="https://wa.me/201284648993"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Kirja Group. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script>
+        function playVideo(element, videoUrl, title, desc) {
+            const video = document.getElementById('heroVideo');
+            video.src = videoUrl;
+            video.load();
+            video.play();
+
+            document.getElementById('currentVideoTitle').innerText = title;
+            document.getElementById('currentVideoDesc').innerText = desc;
+
+            document.querySelectorAll('.playlist-card')
+                .forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+
+            // تغيير شكل الأيقونة من قضبان إلى (X) عند الفتح
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            // لو القائمة مفتوحة
+            if (navMenu.classList.contains('active')) {
+
+                // لو الضغط كان خارج القائمة وخارج زرار المينيو
+                if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    menuToggle.querySelector('i')
+                        .classList.replace('fa-xmark', 'fa-bars');
+                }
+            }
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kirja Group</title>
+    <meta name="description"
+        content="Kirja Group - شركة متخصصة في البرمجة، التصميم الجرافيكي، تحرير الفيديو، تطوير Front-End و Back-End، ومساعدة العملاء في تنفيذ مشاريعهم الرقمية باحترافية.">
+    <meta name="keywords"
+        content="Kirja Group, برمجة مواقع, تصميم جرافيك, فيديو مونتاج, Front-End, Back-End, دعم العملاء, مشاريع رقمية, حلول رقمية, تطوير مواقع">
+    <meta name="author" content="Kirja Group">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Kirja Group | هويتك الرقمية تبدأ هنا">
+    <meta property="og:description"
+        content="تصفح خدماتنا في البرمجة، التصميم، المونتاج، وتطوير المواقع. اطلب مشروعك الآن مع Kirja Group.">
+    <meta property="og:image" content="img/Gemini_Generated_Image_3btoeg3btoeg3bto.png">
+    <meta property="og:url" content="https://www.kirjagroup.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirja Group | هويتك الرقمية تبدأ هنا">
+    <meta name="twitter:description"
+        content="اطلب مشروعك الآن مع Kirja Group في البرمجة، التصميم الجرافيكي، والمونتاج.">
+    <meta name="twitter:image" content="img/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)),
+                url("https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775919/Gemini_Generated_Image_bhxk8ebhxk8ebhxk_ac5974.png") no-repeat center / cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        html {
+
+            overflow-x: hidden;
+        }
+
+        img,
+        div {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Profile Box */
+        .profile-box {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            color: #fff;
+            text-align: center;
+            border-radius: 24px;
+            padding: 40px 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-wrapper {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 166, 0.3);
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .profile-box h1 {
+            /* تغيير من h2 إلى h1 لأهمية الـ SEO */
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .profile-box p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+        }
+
+        .profile-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .profile-buttons a {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s all ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .profile-buttons a i {
+            font-size: 18px;
+            color: #00ffa6;
+        }
+
+        .profile-buttons a:hover {
+            background: #00ffa6;
+            color: #001510;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 255, 166, 0.2);
+        }
+
+        .profile-buttons a:hover i {
+            color: #001510;
+        }
+
+        .profile-social {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .profile-social a {
+            font-size: 22px;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .profile-social a:hover {
+            color: #00ffa6;
+            transform: scale(1.2);
+        }
+
+        .footer-tag {
+            margin-top: 30px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Media Queries للموبايل والشاشات الصغيرة */
+        @media (max-width: 480px) {
+            .profile-box {
+                padding: 30px 20px;
+                /* تقليل المسافات الداخلية */
+                max-width: 100%;
+                /* جعل الصندوق يأخذ عرض الشاشة */
+            }
+
+            .logo-wrapper {
+                width: 80px;
+                /* تصغير حجم اللوجو */
+                height: 80px;
+            }
+
+            .profile-box h1 {
+                font-size: 22px;
+                /* تصغير حجم العنوان الكبير */
+            }
+
+            .profile-box p {
+                font-size: 13px;
+                /* تصغير حجم النص الوصفي */
+                margin-bottom: 20px;
+            }
+
+            .profile-buttons a {
+                padding: 12px;
+                /* تقليل حجم الأزرار */
+                font-size: 14px;
+                /* تصغير خط الأزرار */
+            }
+
+            .profile-social {
+                margin-top: 25px;
+                gap: 15px;
+                /* تقليل المسافات بين أيقونات التواصل */
+            }
+
+            .profile-social a {
+                font-size: 20px;
+            }
+        }
+
+        /* شاشات التابلت المتوسطة */
+        @media (max-width: 768px) {
+            .profile-box {
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="profile-box">
+        <header>
+            <div class="logo-wrapper">
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775924/logo_lwngvs.png" alt="Kirja Group Logo - كيرجا جروب">
+            </div>
+            <h1>Kirja Group</h1>
+            <p>
+                نبتكر الحلول الرقمية، نصمم التجربة، ونبني مستقبلك التقني باحترافية تفوق التوقعات.
+            </p>
+        </header>
+
+        <nav class="profile-buttons">
+            <a href="home.html" title="زيارة الموقع الرسمي">
+                <i class="fa-solid fa-globe"></i> تصفح موقعنا الرسمي
+            </a>
+            <a href="about.html" title="من نحن">
+                <i class="fa-solid fa-circle-info"></i> تعرف علينا أكثر
+            </a>
+            <a href="contactus.html" title="تواصل معنا لطلب خدمة">
+                <i class="fa-solid fa-paper-plane"></i> اطلب مشروعك الآن
+            </a>
+        </nav>
+
+        <div class="profile-social">
+            <a href="https://www.facebook.com/share/1AMmSUq6UC/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"
+                title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/kirja_group" target="_blank" aria-label="Instagram" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="http://www.youtube.com/@Kirja-Group" target="_blank" aria-label="youtube" title="youtube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@kirja_group?is_from_webapp=1&sender_device=pc" target="_blank"
+                aria-label="tiktok" title="tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/201284648993" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <footer class="footer-tag">
+            &copy; 2025 KIRJA GROUP | All Rights Reserved
+        </footer>
+    </main>
+
+</body>
+
+</html>

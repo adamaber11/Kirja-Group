@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة الإبداع | Kirja Group</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-green: #00e293;
+            --dark-navy: #0f172a;
+            --soft-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background: #fff;
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .main-header {
+            background: var(--dark-navy);
+            padding: 15px 0;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 25px;
+        }
+
+        .logo img { width: 100px; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-navy) 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: #fff;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span { color: var(--primary-green); }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            opacity: 0.9;
+            font-size: 18px;
+        }
+
+        /* Steps Section */
+        .steps-container {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* الـ Timeline */
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            right: 45px;
+            top: 20px;
+            bottom: 20px;
+            width: 3px;
+            background: #e2e8f0;
+        }
+
+        .step-card {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            transition: 0.4s;
+        }
+
+        .step-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--primary-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--dark-navy);
+            z-index: 2;
+            box-shadow: 0 10px 20px rgba(0, 226, 147, 0.2);
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #f1f5f9;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            width: 100%;
+        }
+
+        .step-content h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--dark-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-content h3 span {
+            font-size: 14px;
+            background: #f1f5f9;
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: var(--text-muted);
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+        }
+
+        /* Hover Effect */
+        .step-card:hover .step-content {
+            transform: scale(1.02);
+            border-color: var(--primary-green);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        /* Services Tags */
+        .service-badge {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 15px;
+            background: rgba(0, 226, 147, 0.1);
+            color: #059669;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* ===== Footer ===== */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffa6;
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00ffa6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+        
+
+      @media (max-width: 768px) {
+
+    .header-wrapper {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 90px 20px 60px;
+        clip-path: none;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .steps-container {
+        margin: 50px auto;
+    }
+
+    .steps-container::before {
+        right: 22px;
+    }
+
+    .step-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 40px;
+    }
+
+    .step-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .step-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-wrapper">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Kirja Group">
+                <span>Kirja Group</span>
+            </a>
+            <a href="contactus.html" style="background: var(--primary-green); color: #000; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px;">تواصل معنا</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>كيف نبني <span>مشروعك؟</span></h1>
+            <p>من التصميم الجرافيكي المبدع إلى البرمجة المعقدة ومونتاج الفيديو الاحترافي.. إليك خارطة الطريق لنجاحك معنا.</p>
+        </div>
+    </section>
+
+    <div class="steps-container">
+
+        <div class="step-card">
+            <div class="step-icon"><i class="fas fa-comments"></i></div>
+            <div class="step-content">
+                <h3>الجلسة الاستكشافية <span>البداية</span></h3>
+                <p>نجتمع بك لفهم هوية علامتك التجارية. إذا كنت تحتاج هوية بصرية، موقعاً برمجياً، أو فيديو دعائي، نقوم بتحديد الأهداف والأسلوب الفني (Moodboard).</p>
+                <div class="service-badge">تحليل المتطلبات</div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon"><i class="fas fa-palette"></i></div>
+            <div class="step-content">
+                <h3>التصميم الإبداعي و UI/UX</h3>
+                <p>نبدأ بجلسات الـ Graphic Design لإنشاء الشعارات والهوية، وبالتوازي نصمم واجهات المستخدم (Front-End Design) لضمان تجربة تصفح فريدة وجذابة.</p>
+                <div class="service-badge">جرافيك ديزاين & واجهات</div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon"><i class="fas fa-video"></i></div>
+            <div class="step-content">
+                <h3>صناعة المحتوى والمونتاج</h3>
+                <p>في هذه المرحلة، يقوم فريق الـ Video Editing بمعالجة الفيديوهات، إضافة المؤثرات البصرية والصوتية (Motion Graphics) لتعزيز حضورك الرقمي.</p>
+                <div class="service-badge">فيديو إيديتنج</div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon"><i class="fas fa-code"></i></div>
+            <div class="step-content">
+                <h3>التطوير والبرمجة الكاملة</h3>
+                <p>تحويل التصاميم إلى واقع. نبني الـ Front-End بأحدث التقنيات، ونربطها بـ Back-End قوي وسريع لضمان أداء موقعك واستقرار قواعد البيانات.</p>
+                <div class="service-badge">Full-Stack Development</div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon"><i class="fas fa-vial"></i></div>
+            <div class="step-content">
+                <h3>الاختبار وضمان الجودة</h3>
+                <p>نختبر سرعة الموقع، وتوافق الفيديوهات مع المنصات، وسلامة الكود البرمجي. لا ننتقل للخطوة التالية إلا بعد التأكد من مثالية كل بكسل.</p>
+                <div class="service-badge">Quality Assurance</div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon"><i class="fas fa-rocket"></i></div>
+            <div class="step-content">
+                <h3>التسليم والتدريب</h3>
+                <p>نسلمك كافة الملفات (تصاميم، فيديوهات، سورس كود). ونقدم لك جلسة تدريبية لإدارة موقعك وفهم كيفية استخدام لوحة التحكم بسهولة.</p>
+                <div class="service-badge">انطلاق المشروع</div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+       <footer class="main-footer">
+        <div class="container footer-container">
+            <div>
+                <img src="img/logo.png" alt="Kirja Logo" class="footer-logo">
+                <p>نحن نبني المستقبل الرقمي بأدوات اليوم. جودة، سرعة، وابتكار.</p>
+            </div>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <a href="home.html">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="service.html">الخدمات</a>
+                <a href="portfolio.html">أعمالنا</a>
+            </div>
+            <div>
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1AMmSUq6UC/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kirja_group"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@Kirja-Group"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="https://wa.me/201284648993"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Kirja Group. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

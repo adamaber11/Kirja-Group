@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta name="description"
+        content="Kirja Group تقدم حلول رقمية متكاملة تشمل التصميم، البرمجة، الجرافيك والمونتاج لدعم أعمالك وتحقيق النجاح.">
+    <meta name="keywords"
+        content="Kirja Group, خدمات رقمية, تصميم مواقع, تطوير واجهات, Full-Stack, جرافيك, مونتاج فيديو, UI, UX">
+    <meta name="author" content="Kirja Group">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="خدماتنا | Kirja Group">
+    <meta property="og:description"
+        content="حلول رقمية متكاملة: تصميم، برمجة، مونتاج، وجرافيك لدعم أعمالك وتحقيق النجاح.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://www.kirjagroup.com/service.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="خدماتنا | Kirja Group">
+    <meta name="twitter:description"
+        content="حلول رقمية متكاملة: تصميم، برمجة، مونتاج، وجرافيك لدعم أعمالك وتحقيق النجاح.">
+    <meta name="twitter:image" content="img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا | Kirja Group</title>
+    <link rel="icon" href="img/logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== Global Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            overflow-x: hidden;
+            color: #0f172a;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== Header ===== */
+        .main-header {
+            background: #0f172a;
+            padding: 15px 0;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: #00ffa6;
+        }
+
+        .header-btn {
+            background: #00ffa6;
+            color: #001510;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .header-btn:hover {
+            background: #01291d;
+            color: #fff;
+        }
+
+        .menu-icon {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero-section {
+            height: 90vh;
+            background: linear-gradient(rgb(15, 23, 42), rgba(15, 23, 42, 0.7)), url('https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775917/Gemini_Generated_Image_17ocfe17ocfe17oc_qd48r8.png') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-section h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero-section h1 strong {
+            color: #00ffa6;
+        }
+
+        /* ===== Services Grid ===== */
+        .section-padding {
+            padding: 160px 0 80px 0;
+            background-color: #f4f9ff;
+            border-radius: 100% 100% 0 0 / 180px 180px 0 0;
+            margin-top: -150px;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #0f172a;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: #00ffa6;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-card:nth-child(4) {
+            grid-column: 2;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ffa6;
+            box-shadow: 0 10px 30px rgba(0, 255, 166, 0.1);
+        }
+
+        .service-card i {
+            font-size: 45px;
+            color: #008456;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* ===== Growth Section ===== */
+        .growth-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .growth-flex {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .growth-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .growth-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .growth-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .growth-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        .growth-content h2 span {
+            color: #008456;
+        }
+
+        .growth-content p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .growth-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            color: #0f172a;
+        }
+
+        .feature-item i {
+            color: #00ffa6;
+            background: #0f172a;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        /* ===== Pricing Section ===== */
+        .pricing-section {
+            background: #f4f9ff;
+            padding: 80px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .price-card {
+            background: #fff;
+            padding: 50px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .price-card.featured {
+            border: 2px solid #00ffa6;
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .price-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .price-card .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 25px;
+        }
+
+        .price-card .price span {
+            font-size: 16px;
+            color: #64748b;
+        }
+
+        .price-card ul {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: right;
+        }
+
+        .price-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+        }
+
+        .price-card ul li i {
+            color: #00ffa6;
+            margin-left: 10px;
+        }
+
+        .price-btn {
+            display: block;
+            background: #0f172a;
+            color: #fff;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .price-card.featured .price-btn {
+            background: #00ffa6;
+            color: #001510;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00ffa6;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* حاوية الشبكة - تعديل للريسبونسف */
+        .pricing-grid {
+            display: flex;
+            /* تحويل لـ Flex لسهولة التحكم في التمرير */
+            gap: 20px;
+            padding: 40px 10px;
+            overflow-x: auto;
+            /* تمكين التمرير الأفقي */
+            scroll-snap-type: x mandatory;
+            /* جعل الكارت يقف في المنتصف عند السحب */
+            scrollbar-width: none;
+            /* إخفاء شريط التمرير في فايرفوكس */
+            justify-content: center;
+            /* توسيط الكروت في الشاشات الكبيرة */
+        }
+
+        /* إخفاء شريط التمرير في كروم وسفاري */
+        .pricing-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* تصغير حجم الكارت */
+        .price-card {
+            background: #ffffff;
+            padding: 25px 20px;
+            /* تقليل الحشو الداخلي */
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 280px;
+            /* تحديد عرض أصغر للكارت */
+            max-width: 300px;
+            flex-shrink: 0;
+            /* منع الكروت من الانكماش */
+            scroll-snap-align: center;
+            /* محاذاة الكارت في المنتصف عند السحب */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* تمييز الباقة الأكثر طلباً */
+        .price-card.featured {
+            border: 2px solid #00ffa6;
+            transform: scale(1.02);
+            /* تقليل نسبة التكبير لتناسب الحجم الصغير */
+        }
+
+        /* تصغير العناوين والأسعار لتناسب الحجم الجديد */
+        .price-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .package-desc {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 30px;
+            /* تصغير حجم السعر */
+            margin: 10px 0;
+        }
+
+        .price-card ul li {
+            font-size: 13px;
+            /* تصغير خط المميزات */
+            padding: 8px 0;
+        }
+
+        /* زر الطلب أصغر قليلاً */
+        .price-btn {
+            padding: 12px 20px;
+            font-size: 14px;
+            margin-top: auto;
+            /* دفع الزر للأسفل دائماً */
+        }
+
+        /* شارة الأكثر طلباً أصغر */
+        .card-badge {
+            top: -12px;
+            padding: 4px 15px;
+            font-size: 12px;
+        }
+
+        /* ضبط الريسبونسف للهواتف */
+        @media (max-width: 768px) {
+            .pricing-grid {
+                justify-content: flex-start;
+                /* بدء التمرير من اليمين في الموبايل */
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .price-card.featured {
+                transform: scale(1);
+                /* إلغاء التكبير في الموبايل لمنع التداخل */
+            }
+        }
+
+        /* ===== Process Section ===== */
+        .process-section {
+            padding: 100px 0;
+            background-color: #f8fafc;
+        }
+
+        .process-section .section-title span {
+            color: #008456;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .step-item {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 5px solid transparent;
+        }
+
+        .step-item:hover {
+            transform: translateY(-10px);
+            border-top: 5px solid #00ffa6;
+            box-shadow: 0 15px 40px rgba(0, 255, 166, 0.1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #0f172a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 25px;
+            transition: 0.3s ease;
+        }
+
+        .step-item:hover .step-number {
+            background: #00ffa6;
+            color: #0f172a;
+        }
+
+        .step-content h3 {
+            font-size: 20px;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .step-content p {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ===== Footer ===== */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffa6;
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00ffa6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+
+            /* زر الهامبرجر وتأثير التحول */
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+                z-index: 1100;
+                /* أعلى من القائمة */
+                position: relative;
+            }
+
+            /* إذا كنت تستخدم خطوط داخل الهامبرجر */
+            .menu-icon span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: white;
+                margin: 5px 0;
+                transition: 0.4s;
+            }
+
+            /* تحويل الهامبرجر لعلامة X عند الفتح */
+            .menu-icon.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .menu-icon.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-icon.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            /* القائمة الجانبية (نفس طلبك بالضبط) */
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                /* مخفية */
+                width: 280px;
+                height: 100vh;
+                background: var(--dark-navy, #050a15);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+            }
+
+            .nav.active {
+                right: 0;
+                /* تظهر عند الفتح */
+            }
+        }
+
+        .price-card.featured {
+            transform: scale(1);
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-card:nth-child(4) {
+            grid-column: span 1;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background: #00d389;
+            color: #001510;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-btn:active {
+            transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+
+    .footer-container {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-wrapper">
+            <a href="index.html" class="logo">
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775924/logo_lwngvs.png"
+                    alt="Kirja Group">
+                <span>Kirja Group</span>
+            </a>
+            <nav class="nav" id="navMenu">
+                <a href="home.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="about.html"><i class="fa-solid fa-users"></i> من نحن</a>
+                <a href="service.html" class="active"><i class="fa-solid fa-gear"></i> الخدمات</a>
+                <a href="portfolio.html"><i class="fa-solid fa-briefcase"></i> أعمالنا</a>
+                <a href="contactus.html" class="contact-btn" style="color: #000;">تواصل معنا</a>
+
+            </nav>
+            <div class="menu-icon" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>خدماتنا في <strong>Kirja Group</strong></h1>
+            <p>نقدم حلولاً رقمية متكاملة تبدأ من الفكرة وتستمر حتى النجاح، مع التركيز على الابتكار والجودة.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Front-End Development</h3>
+                    <p>تحويل التصاميم إلى واجهات ويب تفاعلية وسريعة الاستجابة باستخدام أحدث تقنيات HTML, CSS, JS.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-server"></i>
+                    <h3>Back-End Development</h3>
+                    <p>بناء قواعد بيانات قوية وأنظمة خلفية آمنة تضمن أداء موقعك واستقراره تحت أي ضغط.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-bezier-curve"></i>
+                    <h3>Graphic Design</h3>
+                    <p>تصميم هويات بصرية مبتكرة وشعارات تعكس احترافية علامتك التجارية وتترك أثراً لدى الجمهور.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-video"></i>
+                    <h3>Video Editing</h3>
+                    <p>صناعة وتحرير مقاطع فيديو احترافية مع إضافة تأثيرات بصرية وصوتية تروي قصتك بذكاء.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="growth-section">
+        <div class="container">
+            <div class="growth-flex">
+                <div class="growth-content">
+                    <h2>نساعدك في <span>بناء وتطوير</span> بيزنس أحلامك</h2>
+                    <p>في Kirja Group، لا نكتفي بتقديم الخدمات التقنية فقط، بل نؤمن بأننا شركاء في نجاحك.</p>
+                    <div class="growth-features">
+                        <div class="feature-item"><i class="fa-solid fa-check"></i> استشارات تقنية</div>
+                        <div class="feature-item"><i class="fa-solid fa-check"></i> تحليل السوق</div>
+                        <div class="feature-item"><i class="fa-solid fa-check"></i> توسيع العمل</div>
+                        <div class="feature-item"><i class="fa-solid fa-check"></i> منتجات رقمية</div>
+                    </div>
+                    <a href="contactus.html#binat" class="header-btn"
+                        style="display:inline-block; margin-top:40px;">استشارة
+                        مجانية</a>
+                </div>
+                <div class="growth-image">
+                    <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775907/Gemini_Generated_Image_aj7mcraj7mcraj7m_mnirvo.png"
+                        alt="Strategy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pricing-grid">
+
+        <div class="price-card">
+            <h3>باقة الهوية الرقمية</h3>
+            <p class="package-desc">تركيز كامل على الجرافيك والمحتوى</p>
+            <div class="price">4,500<span> جنيه / عرض خاص</span></div>
+            <hr>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> تصميم هوية بصرية كاملة (Logo & Brand)</li>
+                <li><i class="fa-solid fa-check"></i> 5 نماذج لوجو للاختيار بينهم</li>
+                <li><i class="fa-solid fa-check"></i> دليل استخدام الهوية (Brand Guideline)</li>
+                <li><i class="fa-solid fa-check"></i> تصميم بروفايل السوشيال ميديا كامل</li>
+                <li><i class="fa-solid fa-check"></i> 20 بوست جاهز للنشر</li>
+            </ul>
+            <a href="contactus.html#binat" class="price-btn">اطلب الهوية الآن</a>
+        </div>
+
+        <div class="price-card featured">
+            <div class="card-badge">الأكثر طلباً</div>
+            <h3>باقة الحلول البرمجية</h3>
+            <p class="package-desc">بناء الأنظمة من الصفر (Full Stack)</p>
+            <div class="price">12,000<span> جنيه / عرض محدود</span></div>
+            <hr>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> تطوير واجهات حديثة (Front-end)</li>
+                <li><i class="fa-solid fa-check"></i> لوحة تحكم وقواعد بيانات (Back-end)</li>
+                <li><i class="fa-solid fa-check"></i> UI/UX احترافي متوافق مع جميع الشاشات</li>
+                <li><i class="fa-solid fa-check"></i> دومين + استضافة + SSL سنة مجاناً</li>
+                <li><i class="fa-solid fa-check"></i> دعم فني 3 أشهر بعد التسليم</li>
+            </ul>
+            <a href="contactus.html#binat" class="price-btn">ابدأ مشروعك الآن</a>
+        </div>
+
+        <div class="price-card">
+            <h3>باقة الـ Full-Service</h3>
+            <p class="package-desc">إدارة المشروع من الألف للياء</p>
+            <div class="price">22,000<span> جنيه / عرض مميز</span></div>
+            <hr>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> برمجة كاملة Front-end & Back-end</li>
+                <li><i class="fa-solid fa-check"></i> إدارة صفحات السوشيال ميديا شهر كامل</li>
+                <li><i class="fa-solid fa-check"></i> حملة إعلانية ممولة (إدارة فقط)</li>
+                <li><i class="fa-solid fa-check"></i> تصميم ومونتاج فيديوهات للمشروع</li>
+                <li><i class="fa-solid fa-check"></i> خطة تسويق + دراسة المنافسين</li>
+            </ul>
+            <a href="contactus.html#binat" class="price-btn">احجز العرض الشامل</a>
+        </div>
+
+    </div>
+
+
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <span>كيف نعمل؟</span>
+                <h2>رحلة مشروعك من الفكرة للمنتج</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>التخطيط</h3>
+                        <p>نبدأ بفهم فكرتك بدقة، وتحليل السوق والمنافسين، وتحديد أهداف المشروع، ووضع استراتيجية واضحة
+                            لضمان نجاح المنتج من البداية.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>التصميم</h3>
+                        <p>نقوم بتصميم الهوية البصرية الخاصة بمشروعك، إنشاء واجهات جذابة وتجربة مستخدم مميزة، مع إنتاج
+                            محتوى بصري ونصي يدعم رؤيتك وأهدافك.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>البرمجة</h3>
+                        <p>نقوم بتطوير المشروع باستخدام أحدث لغات البرمجة والتقنيات الحديثة لضمان أداء عالي وسلاسة في
+                            الاستخدام، مع دمج جميع المميزات المطلوبة.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>الإطلاق</h3>
+                        <p>نطلق المشروع رسميًا مع متابعة الأداء، تحديثات دورية، وصيانة مستمرة لضمان استقرار المشروع
+                            وتحقيق أفضل تجربة للمستخدمين.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div>
+                <img src="https://res.cloudinary.com/dy2qgptrn/image/upload/v1769775924/logo_lwngvs.png" alt="Logo"
+                    class="footer-logo">
+                <p>نحن نبني المستقبل الرقمي بأدوات اليوم.</p>
+            </div>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="service.html">الخدمات</a>
+                <a href="portfolio.html">أعمالنا</a>
+            </div>
+            <div>
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1AMmSUq6UC/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kirja_group"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/201284648993"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kirja Group. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navMenu = document.querySelector('.nav');
+
+        // 1. فتح وإغلاق القائمة عند الضغط على الزر
+        menuIcon.addEventListener('click', (e) => {
+            e.stopPropagation(); // منع انتقال الضغطة للخلفية فوراً
+            menuIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // 2. إغلاق القائمة عند الضغط في أي مكان خارجها
+        document.addEventListener('click', (event) => {
+            // نتحقق إذا كانت القائمة مفتوحة والضغط تم خارج القائمة وخارج الزر
+            if (navMenu.classList.contains('active')) {
+                if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+                    menuIcon.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            }
+        });
+
+        // 3. إغلاق القائمة عند الضغط على أي رابط بداخلها
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuIcon.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
